@@ -25,7 +25,6 @@ def home_page():
     positive_words = positive_sentimental.split('\n')
     negative_sentimental = open('negative.txt').read()
     negative_words = negative_sentimental.split('\n')
-    print positive_words[:10]
     positive_counter=0
     negative_counter = 0
     emotion_counter = 0
@@ -53,4 +52,4 @@ def home_page():
     return bottle.template('index', {'positive': positive_counter,'negative': negative_counter,'partial':emotion_counter,'nocomments':no_comments})
 
 bottle.debug(True)
-bottle.run(host='localhost', port=8082)
+bottle.run(host='localhost', port=8080)
